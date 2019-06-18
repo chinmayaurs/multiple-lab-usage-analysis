@@ -1,0 +1,81 @@
+<div style="width: 100%;text-align: center; text-shadow: 2px 2px 2px #CCCCCC;">
+    <h1>SOIS Lab Analysis</h1>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-left">
+    <ul class="nav navbar-nav">
+        <li><a href="#">MicroControler Lab</a>
+            <div class="data">
+                <ul style="margin-left: -7%;">
+                    <li> <button class="btn btn-primary dropdown-toggle" style="width: 80%" type="button" (click)="summaryOfMicroController()"> Summary </button></li>
+                    <li style="margin-top: 2px;">
+                        <div class="dropdown"> <button class="btn btn-primary dropdown-toggle" style="width:80%" type="button" data-toggle="dropdown">Stat </button>
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let val of microcontrollerMAC"><a>{{val.machine_address}}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+        <li><a href="#">WireLess Lab</a>
+            <div class="data">
+                <ul style="margin-left: -7%;">
+                    <li> <button class="btn btn-primary dropdown-toggle" style="width: 80%" type="button" (click)="summaryOfWireless()"> Summary </button></li>
+                    <li style="margin-top: 2px;">
+                        <div class="dropdown"> <button class="btn btn-primary dropdown-toggle" style="width:80%" type="button" data-toggle="dropdown">Stat </button>
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let val of wirelessMAC"><a>{{val.machine_address}}</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">VLSI Lab</a>
+            <div class="data">
+                <ul style="margin-left: -7%;">
+                    <li> <button class="btn btn-primary dropdown-toggle" style="width: 80%" type="button" (click)="summaryofVlsi()"> Summary </button></li>
+                    <li style="margin-top: 2px;">
+                        <div class="dropdown"> <button class="btn btn-primary dropdown-toggle" style="width:80%" type="button" data-toggle="dropdown">Stat </button>
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let val of vlsiMAC"><a>{{val.machine_address}}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="container" style="width: 970px;">
+    <div id="mainData" class="">
+        <!--<h2>Over all data, We can show here.</h2>
+        <div class="col-lg-4">
+            <svg id="fillgauge1" width="97%" height="250"></svg>
+            <h2 class='text-center'>Tag 1</h2>
+        </div>
+        <div class="col-lg-4">
+            <svg id="fillgauge2" width="97%" height="250"></svg>
+            <h2 class='text-center'>Tag 1</h2>
+        </div>
+        <div class="col-lg-4">
+            <svg id="fillgauge3" width="97%" height="250"></svg>
+            <h2 class='text-center'>Tag 1</h2>
+        </div>-->
+        <div id="columngraph"></div>
+        <hr>
+        <br>
+        <div>
+            <h3>{{Summary}}</h3>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-6" id="network"></div>
+            <div class="col-sm-6" id="memory"></div>
+
+        </div>
+        <div id="bubblegraph" style="height: 400px; min-width: 80%px; max-width: 80%; margin: 0 auto"></div>
+    </div>
+</div>

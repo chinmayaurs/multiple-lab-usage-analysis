@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+.h1file {
+    color: red;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.highcharts-tooltip h3 {
+    margin: 0.3em 0;
+}
