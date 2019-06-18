@@ -1,0 +1,71 @@
+<div class="navbar navbar-inverse navbar-fixed-left">
+    <a id="overall" class="navbar-brand" href="#">Overall</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#">MicroControler Lab</a>
+            <div class="data">
+                <ul style="margin-left: -7%;">
+                    <li> <button class="btn btn-primary dropdown-toggle" style="width: 80%" type="button" (click)="getData('microcontroller','summary')"> Summary </button></li>
+                    <li style="margin-top: 2px;">
+                        <div class="dropdown"> <button class="btn btn-primary dropdown-toggle" style="width:80%" type="button" data-toggle="dropdown" >Stat </button>
+                            <ul class="dropdown-menu">
+                                <li  *ngFor="let data of mcList"><a (click)="getData('microcontroller', data)">{{data}}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+        <li><a href="#">WireLess Lab</a>
+            <div class="data">
+                <ul style="margin-left: -7%;">
+                    <li> <button class="btn btn-primary dropdown-toggle" style="width: 80%" type="button"> Summary </button></li>
+                    <li style="margin-top: 2px;">
+                        <div class="dropdown"> <button class="btn btn-primary dropdown-toggle" style="width:80%" type="button" data-toggle="dropdown">Stat </button>
+                            <ul class="dropdown-menu">
+                                <li><a>This is list1</a></li>
+                                <li><a>This is list2</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">VLSI Lab</a>
+            <div class="data">
+                <ul style="margin-left: -7%;">
+                    <li> <button class="btn btn-primary dropdown-toggle" style="width: 80%" type="button"> Summary </button></li>
+                    <li style="margin-top: 2px;">
+                        <div class="dropdown"> <button class="btn btn-primary dropdown-toggle" style="width:80%" type="button" data-toggle="dropdown">Stat </button>
+                            <ul class="dropdown-menu">
+                                <li><a>This is list1</a></li>
+                                <li><a>This is list2</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <div id="mainData" class="row">
+        <h2>Over all data, We can show here.</h2>
+        <div class="row">
+        <div class="col-lg-4">
+            <svg id="disk_occupation"  width="97%" height="250"></svg>
+            <h2 class='text-center'>Tag 1</h2>
+        </div>
+        <div class="col-lg-4">
+            <svg id="network_occupation" width="97%" height="250"></svg>
+            <h2 class='text-center'>Tag 1</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+            <svg id="file_count" width="97%" height="250"></svg>
+            <h2 class='text-center'>Tag 1</h2>
+        </div>
+      </div>
+    </div>
+</div>
